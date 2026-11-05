@@ -1,0 +1,83 @@
+/* REICHT. — Handy-Layout: alles passt in den Bildschirm, Karte gross, Knöpfe unten. */
+@media(max-width:700px){
+  html,body.game-body{height:100%;overscroll-behavior:none}
+  body.game-body{display:flex;flex-direction:column;height:100vh;height:100dvh;overflow:hidden}
+  .game-header{flex:none;height:44px!important;padding:0 14px!important}
+  .game-header .wordmark{font-size:18px!important}
+  .game-header .system-label,.game-header nav a{display:none!important}
+  .game-header nav{gap:14px}.game-header nav button{font-size:12px!important;padding:6px 4px}
+  #experience{flex:1 1 auto;min-height:0;display:flex;flex-direction:column;position:relative}
+  #experience[hidden]{display:none!important}
+  .game-footer{display:none!important}
+
+  /* Kopfzeile: drei Zahlen, darunter Ziel und Lebensbalken */
+  .hud{flex:none;display:grid;grid-template-columns:1fr 1fr 1fr;min-height:0;background:#111a10}
+  .hud>div{padding:6px 10px;border-right:1px solid #2c3a26;min-width:0}
+  .hud span{font-size:10px;letter-spacing:.2px;line-height:1.3}
+  .hud strong{font-size:17px;letter-spacing:-.5px;line-height:1.25}
+  .hud-stat small{display:none}
+  .hud-next .progress-track{margin-top:3px;height:3px}
+  .hud .hud-mission{grid-column:1/-1;order:5;display:grid;grid-template-columns:1fr 1fr;gap:6px 14px;border-right:0;border-top:1px solid #2c3a26;padding:6px 10px}
+  .hud .hud-mission>span,.hud .hud-mission>strong,.hud .hud-mission>small{display:none}
+  .hud .personal-goal{margin:0!important;padding:0!important;border:0!important;display:block;grid-column:auto!important}
+  .hud .personal-goal>span{display:block;font-size:10px;grid-column:auto!important}
+  .hud-next span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .hud .personal-goal>strong{font-size:11px!important;line-height:1.3;display:block;color:#e9efd3}
+  .hud .personal-goal .goal-meter{margin-top:3px;height:4px}
+  .hud .personal-goal small,.hud .personal-goal>div:last-child{display:none}
+  .hud .vitals{margin:0;grid-template-columns:1fr;gap:4px;grid-column:auto!important}
+  .vitals div{grid-template-columns:74px 1fr;align-items:center;gap:6px}
+  .vitals span{font-size:10px}.vitals b{height:6px}
+
+  /* Karte füllt den Rest */
+  .pixel-stage{flex:1 1 auto;height:auto!important;min-height:0!important}
+  .map-top{top:8px!important;left:10px!important;right:10px!important}
+  .map-top #chapter{font-size:10px}.map-top #pace{display:none}
+  .map-legend,.possessions{display:none!important}
+  .map-bottom{left:10px!important;right:10px!important;bottom:8px!important}
+  .map-bottom #scene-caption{font-size:11px;max-width:48%;line-height:1.35}
+  .map-bottom button{font-size:12px;padding:6px 10px;min-width:36px;min-height:34px}
+
+  /* Markierungen: grosse Tipp-Flächen, Namen nur wenn kaufbar */
+  .plot{padding:2px;min-width:0;max-width:96px}
+  .plot .plot-icon{width:32px;height:32px;font-size:22px;line-height:29px;border-width:2px}
+  .plot .plot-name{display:none}
+  .plot .plot-icon{width:28px!important;height:28px!important;font-size:20px!important;line-height:25px!important}
+  .plot .plot-cost{display:none!important}
+
+  /* Meldungen klein unten links über den Karten-Knöpfen */
+  .announcement{left:8px!important;bottom:54px!important;width:min(300px,76%)!important;padding:8px 12px!important}
+  .announcement>span{font-size:10px!important}.announcement>strong{font-size:14px!important;margin:3px 0!important}
+  .announcement>p{font-size:11px!important;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+  #floaters .temptation:nth-last-child(n+3){display:none}
+  .temptation{max-width:150px;padding:7px 9px}.temptation strong{font-size:11px}.temptation small{font-size:10px}
+  .order{width:158px;padding:6px 8px 8px}.order strong{font-size:12px}.order em{font-size:11px}.order .tag{font-size:10px}
+  #toast{position:fixed!important;left:50%!important;top:auto!important;bottom:124px!important;transform:translateX(-50%)!important;max-width:92vw;font-size:12px;text-align:center}
+
+  /* Knöpfe unten, daumenfreundlich */
+  .command-bar{flex:none;height:auto!important;display:grid!important;grid-template-columns:1fr 1fr;padding-bottom:env(safe-area-inset-bottom);background:#10170f}
+  .work-button,.build-launch{width:auto!important;height:68px!important}
+  .work-button strong{font-size:26px}
+  .work-button small{font-size:11px}
+  .pressure-command{grid-column:1/2;height:30px!important;width:auto!important;padding:4px 10px!important;display:flex;align-items:center}
+  .pressure-command #command{font-size:11px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .pressure-track{display:none}
+  .audio-controls{grid-column:2/3;height:30px!important;display:flex;justify-content:flex-end;padding-right:10px}
+  .audio-controls label,.audio-controls input{display:none}
+  .audio-controls button{font-size:11px;padding:4px 10px}
+
+  /* Ausbau-Menü passt auf den Bildschirm */
+  .build-menu{background:#0f170e!important;position:fixed!important;inset:44px 0 0 0!important;z-index:30;overflow-y:auto;-webkit-overflow-scrolling:touch;padding:14px!important}
+  .products{grid-template-columns:1fr!important;gap:10px!important}
+  .product{padding:12px!important}
+
+  /* Outro und Auswertung scrollen */
+  .retreat{overflow-y:auto!important;-webkit-overflow-scrolling:touch}
+  .retreat .outro{position:relative!important;inset:auto!important;transform:none!important;width:auto!important;max-width:none!important;box-sizing:border-box;margin:68px 14px 28px!important;max-height:none!important;padding:18px 16px!important}
+  .retreat .outro h1{font-size:30px!important}
+  .outro-actions{flex-direction:column;align-items:stretch}.outro-actions>*{width:100%;text-align:center}
+  .ending:not([hidden]){position:fixed;inset:0;z-index:36;overflow-y:auto;-webkit-overflow-scrolling:touch;background:#111312;padding:20px 16px calc(60px + env(safe-area-inset-bottom));min-height:0;margin:0;max-width:none}
+  .ending-actions{display:flex;flex-direction:column;gap:10px}.ending-actions>*{width:100%;box-sizing:border-box;text-align:center;padding:14px 12px;border:2px solid #6b8a56;font-size:13px}
+  .retreat .outro-actions{padding-bottom:12px}
+  .snapshot-wrap{margin-inline:-4px}
+}

@@ -382,7 +382,7 @@ window.drawLife = function (time, size) {
     rect(q.x - 9, q.y - 44 + bob, 20, 9, '#161b26'); rect(q.x - 8, q.y - 43 + bob, 18, 7, '#243148'); rect(q.x - 6 + (Math.floor(t / 350 + n) % 9), q.y - 41 + bob, 3, 3, '#ffd98a'); rect(q.x, q.y - 35 + bob, 1, 6, '#59606c');
   }
 };
-window.mapZoom = function () { const size = landSize(), K = 3 / pixelRatio; return K * Math.max(.18, Math.min(1, 8.6 / size, 1.25 * (canvas.height / K - 14) / (size * 20 + 50)) * userZoom); };
+window.mapZoom = function () { const size = landSize(), K = 3 / pixelRatio; return K * Math.max(.18, Math.min(1, 8.6 / size, 1.25 * (canvas.height / K - 14) / (size * 20 + 50), (K > 1.6 ? 1.2 : .96) * (canvas.width / K) / (size * 44 + 60)) * userZoom); };
 
 /* ---------- Hauptzeichnung ---------- */
 window.drawWorld = function (time = 0) {

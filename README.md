@@ -130,6 +130,6 @@ Vor einer Award-Einreichung empfehlen sich Tests mit mehreren Personen, um Spiel
 - **Absturz:** Der Crash baut sich jetzt über etwa 9 Sekunden auf. Zuerst einzelne Pop-ups («Termin verpasst», «Verpasster Anruf», «Freunde: Lange nichts gehört»), dann immer schneller, mit wachsendem Beben. Danach folgt «ERROR_429», dann die «Nimm dir Zeit»-Meldungen und der Kollaps.
 - **Ende:** Im Outro und in der Auswertung gibt es den Button «Zur Startseite». Dort zeigt die Startseite, dass die Runde abgeschlossen ist.
 
-## Version 19
-- Die «+»-Markierungen sind quer über die ganze Karte verteilt (gleichmässige Streuung über das Stadtgebiet, mit Mindestabstand) statt in einer Linie.
-- Aufträge und «Zeit für dich»-Karten spielen beim Anklicken einen Ton: Aufträge eine kurze, helle Münz-Tonfolge, Zeit für dich ein ruhiger, warmer Klang.
+## Version 22 — Neustart und Handy-Ende
+- Neu: «Neu starten ↺» im Outro und in der Auswertung, «Neues Spiel starten ↺» auf der Startseite nach dem Ende. Der Neustart löscht den Abschluss-Status, das Spiel beginnt bei null. Zusätzlich bleibt «Willst du zurück in die Stadt?».
+- Handy: Die Auswertung scrollt jetzt (eigener Bildlauf-Bereich), die Knöpfe stehen untereinander. Die Startseite nach dem Ende zeigt die Botschaft und die Knöpfe direkt unter dem Titel.

@@ -44,22 +44,6 @@ button,.text-button{font-size:max(12px,1em)}
 .outro-actions{gap:8px!important;flex-wrap:wrap}.outro-actions button,.outro-read{padding:10px 13px;font-size:12px}
 .build-launch{padding:8px 18px!important;gap:3px!important}.build-launch>span{font-size:13px!important;line-height:1.2}.build-launch>small{font-size:11px!important}
 @media(max-width:700px){.outro{padding:16px 16px!important;max-width:94vw}.outro h1{font-size:30px!important}.outro-lead{font-size:18px}.build-launch>small{font-size:10px!important}}
-@media(max-width:700px){
-  .hud{grid-template-columns:1fr 1fr 1fr;min-height:0}.hud>div{padding:8px 10px}
-  .hud strong{font-size:18px;letter-spacing:-.5px}.hud span{font-size:10px;letter-spacing:.2px}.hud small{font-size:10px}
-  .hud-stat small{display:none}
-  .hud .hud-mission{grid-column:1/-1;order:5;padding:8px 12px;border-right:0;border-top:1px solid #313d29}
-  .hud .hud-mission>span,.hud .hud-mission>small{display:none}
-  .hud .hud-mission>strong{font-size:12px;margin:0 0 4px}
-  .hud .personal-goal{margin-top:4px;padding-top:6px}.hud .personal-goal>strong{font-size:12px}
-  .vitals{margin-top:6px}.vitals span{font-size:10px}
-  .announcement{top:44px;width:94%;padding:10px 14px}.announcement>span{font-size:10px}.announcement>strong{font-size:15px;margin:5px 0}
-  .announcement>p{font-size:11px;line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
-  .temptation{max-width:150px;padding:8px 10px}.temptation strong{font-size:11px}.temptation small{font-size:9px}
-  #floaters .temptation:nth-last-child(n+3){display:none}
-  .order{width:170px}.order strong{font-size:12px}
-  #toast{font-size:11px;max-width:88vw}
-  .pixel-stage{height:calc(100svh - 300px);min-height:360px}
 }
 
 /* Leseseite (helle Seite): dunkle Texte */
@@ -122,3 +106,5 @@ body[data-stage="1"] .map-legend,body[data-stage="1"] .possessions,body[data-sta
 .plot[data-side="right"] .plot-cost{left:0;transform:none}
 .plot[data-side="left"] .plot-cost{left:auto;right:0;transform:none}
 .plot:hover,.plot:focus-visible{z-index:60}
+.done-message .secondary-button{font-size:13px;margin-top:2px}
+#restart-outro{background:#f6d9a8!important}
