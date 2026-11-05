@@ -12,8 +12,9 @@ try {
   if (sessionStorage.getItem('genug-done')) {
     document.querySelectorAll('.goal-start,.fx-note,.launch-row,#resume-note,.start-message').forEach(e => e.remove());
     const d = document.createElement('section'); d.className = 'start-message done-message';
-    d.innerHTML = '<span class="micro">DIESE RUNDE IST ABGESCHLOSSEN.</span><h2>DU HAST DIR ZEIT GENOMMEN.</h2><p>Das reicht. Das Spiel beginnt nicht von vorn. Wenn du magst, lies, was dahintersteckt, oder sprich mit jemandem, dem du vertraust.</p><p><a href="idee.html">HINTER DEM SPIEL ↗</a> &nbsp; <a href="achtsam.html">ERFOLG &amp; SELBSTFÜRSORGE ↗</a></p>';
+    d.innerHTML = '<span class="micro">DIESE RUNDE IST ABGESCHLOSSEN.</span><h2>DU HAST DIR ZEIT GENOMMEN.</h2><p>Das reicht. Das Spiel beginnt nicht von vorn. Wenn du magst, lies, was dahintersteckt, oder sprich mit jemandem, dem du vertraust.</p><h3 class="back-q">WILLST DU ZURÜCK IN DIE STADT?</h3><p><button id="back-to-city" class="primary-button">JA, ZURÜCK IN DIE STADT ↗</button></p><p><a href="idee.html">HINTER DEM SPIEL ↗</a> &nbsp; <a href="achtsam.html">ERFOLG &amp; SELBSTFÜRSORGE ↗</a></p>';
     document.querySelector('main').append(d);
+    d.querySelector('#back-to-city').addEventListener('click', () => { try { sessionStorage.setItem('genug-return-city', 'yes'); } catch {} location.href = 'spielen.html'; });
     const h = document.querySelector('.title-screen h1'); if (h) h.innerHTML = 'ES HAT<br><em data-t="GEREICHT.">GEREICHT.</em>';
     const p = document.querySelector('.title-screen p'); if (p) p.innerHTML = 'Du bist am Ende angekommen.<br>Nimm dir Zeit.';
   }

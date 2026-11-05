@@ -382,7 +382,7 @@ window.drawLife = function (time, size) {
     rect(q.x - 9, q.y - 44 + bob, 20, 9, '#161b26'); rect(q.x - 8, q.y - 43 + bob, 18, 7, '#243148'); rect(q.x - 6 + (Math.floor(t / 350 + n) % 9), q.y - 41 + bob, 3, 3, '#ffd98a'); rect(q.x, q.y - 35 + bob, 1, 6, '#59606c');
   }
 };
-window.mapZoom = function () { const size = landSize(); return Math.max(.18, Math.min(1, 8.6 / size, 1.25 * (canvas.height - 14) / (size * 20 + 50)) * userZoom); };
+window.mapZoom = function () { const size = landSize(), K = 3 / pixelRatio; return K * Math.max(.18, Math.min(1, 8.6 / size, 1.25 * (canvas.height / K - 14) / (size * 20 + 50)) * userZoom); };
 
 /* ---------- Hauptzeichnung ---------- */
 window.drawWorld = function (time = 0) {
@@ -436,9 +436,9 @@ window.drawWorld = function (time = 0) {
 /* ---------- Ansicht des Spielstands (kein Download, kein Versand) ---------- */
 window.snapshotCity = function () {
   const target = document.getElementById('snapshot'); if (!target) return;
-  const sv = { cam: { ...cam }, z: userZoom, w: canvas.width, h: canvas.height };
-  cam = { x: 0, y: 0 }; userZoom = 1; canvas.width = 640; canvas.height = 360;
+  const sv = { cam: { ...cam }, z: userZoom, w: canvas.width, h: canvas.height, pr: pixelRatio };
+  cam = { x: 0, y: 0 }; userZoom = 1; pixelRatio = 3; canvas.width = 640; canvas.height = 360;
   try { window.drawWorld(animationTime); target.width = 640; target.height = 360; target.getContext('2d').drawImage(canvas, 0, 0); } catch {}
-  cam = sv.cam; userZoom = sv.z; canvas.width = sv.w; canvas.height = sv.h;
+  cam = sv.cam; userZoom = sv.z; pixelRatio = sv.pr; canvas.width = sv.w; canvas.height = sv.h;
 };
 })();

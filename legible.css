@@ -1,0 +1,124 @@
+/* REICHT. — Lesbarkeit: hoher Kontrast, keine Mini-Schriften. Wird zuletzt geladen. */
+:root{--muted:#c2cbb0;--line:#4a5a3c}
+body{font-size:14px}
+/* Dunkle Seiten: gedämpfte Texte aufhellen */
+.micro,.start-kicker,.eyebrow,.system-label,#clock,.hud span,.hud small,#pace,#scene-caption,.comfort,.status,.attention,
+.map-legend,.possessions,.plot-name,#feed-count,.feed-card p,.feed-card small,.feed-label,footer,footer a,footer span,.game-footer a,.game-footer span,
+.ticker,.text-button,.audio-controls label,.audio-controls button,.map-controls button,#discovery,.product-effect,.build-head p,.how-to span,
+.title-art span,.goal-start small,.resume-note,.fx-note,.fx-note label,.start-message,.ending-footnote,.keeps small,.stats span{color:#c9d2b8!important}
+.hud strong,.feed-card h3,.feed-card strong{color:#eef3dc}
+.hud .hud-mission small,.hud .hud-mission strong{color:#f1f6c8}
+.feed-card p{font-size:12px;line-height:1.6}
+.plot-name{background:#0c120bcc;padding:3px 6px;font-size:10px;letter-spacing:.5px}
+.plot-cost{font-size:12px;color:#fff!important}
+.hud small,.hud span{letter-spacing:.6px}
+button,.text-button{font-size:max(12px,1em)}
+/* Meldungen im Spiel */
+.announcement{padding:20px 24px}.announcement>span{font-size:11px;letter-spacing:1px}.announcement>strong{font-size:22px}.announcement>p{font-size:13px;line-height:1.6}
+.temptation{padding:12px 15px;background:#10190dfa;border-color:#b9d36d}.temptation small{font-size:10px;color:#cfdca4!important}.temptation strong{font-size:13px;color:#f1f6c8}
+.very-overloaded .temptation{background:#7e2a1c;border-color:#ffb08c}.very-overloaded .temptation strong,.very-overloaded .temptation small{color:#fff!important}
+#toast{font-size:13px;padding:11px 16px;background:#d5e952;color:#14200a}
+.fx-win-text small{font-size:12px;color:#d9e2c6}.fx-win-text strong{font-size:14px}.fx-win-bar span{font-size:11px}.fx-win-actions button{font-size:12px}
+.order{width:210px}.order small{font-size:10px}.order strong{font-size:14px}.order em{font-size:11px}
+.vitals span{font-size:11px;color:#d3e0b5}.vitals b{height:7px}
+/* Handlungsknöpfe */
+#earn-hint,.work-button small{font-size:12px;font-weight:700;color:#1b2610!important}
+#build-available,.build-launch small{font-size:12px;color:#f1f6c8!important}
+.pressure-command span,#command{font-size:13px;color:#f4f8d4}
+/* Outro: Text auf ruhiger heller Tafel statt auf der Landschaft */
+.outro{background:#f5f4df;border:3px solid #3f5f3a;box-shadow:8px 8px 0 #0004;padding:28px 32px!important;max-width:min(680px,92vw)}
+.outro h1{color:#1f3a24!important}.outro h1 em{color:#35582f!important}
+.outro-kicker,#journey-label,.outro-lead,.outro-copy,.outro-goal,#goal-note{color:#1d3320!important}
+.outro-kicker{font-size:12px}.outro-lead{font-size:24px}.outro-copy,.outro-goal,#goal-note{font-size:15px;line-height:1.75}
+.outro-actions button,.outro-read{font-size:13px;color:#1d3320!important;background:#e5e8cc;border:2px solid #3f5f3a;padding:12px 16px}
+.outro-actions #stay-country{background:#2f5a2c;color:#f6f8e4!important}
+.outro-read{text-decoration:none;display:inline-block}
+#retreat-sound,#journey-label{font-size:12px;color:#1d3320!important;background:#f5f4dfdd;padding:8px 12px}
+/* Startseite */
+.how-to span,.instructions article span{font-size:12px;color:#d5e952!important}
+.instructions article p{font-size:14px;color:#dfe7cb}
+.goal-start legend{font-size:13px;color:#eef3dc}.goal-start label span{font-size:13px;color:#eef3dc}.goal-start small{font-size:12px}
+.ticker div{font-size:13px;color:#d5deba}
+.outro h1{font-size:clamp(34px,5.2vw,54px)!important;line-height:1.2!important;margin:10px 0 14px!important}
+.outro{padding:20px 28px!important}.outro-lead{font-size:21px;margin:8px 0}.outro-copy,.outro-goal,#goal-note{font-size:14px;line-height:1.65;margin:8px 0}
+.outro-actions{gap:8px!important;flex-wrap:wrap}.outro-actions button,.outro-read{padding:10px 13px;font-size:12px}
+.build-launch{padding:8px 18px!important;gap:3px!important}.build-launch>span{font-size:13px!important;line-height:1.2}.build-launch>small{font-size:11px!important}
+@media(max-width:700px){.outro{padding:16px 16px!important;max-width:94vw}.outro h1{font-size:30px!important}.outro-lead{font-size:18px}.build-launch>small{font-size:10px!important}}
+@media(max-width:700px){
+  .hud{grid-template-columns:1fr 1fr 1fr;min-height:0}.hud>div{padding:8px 10px}
+  .hud strong{font-size:18px;letter-spacing:-.5px}.hud span{font-size:10px;letter-spacing:.2px}.hud small{font-size:10px}
+  .hud-stat small{display:none}
+  .hud .hud-mission{grid-column:1/-1;order:5;padding:8px 12px;border-right:0;border-top:1px solid #313d29}
+  .hud .hud-mission>span,.hud .hud-mission>small{display:none}
+  .hud .hud-mission>strong{font-size:12px;margin:0 0 4px}
+  .hud .personal-goal{margin-top:4px;padding-top:6px}.hud .personal-goal>strong{font-size:12px}
+  .vitals{margin-top:6px}.vitals span{font-size:10px}
+  .announcement{top:44px;width:94%;padding:10px 14px}.announcement>span{font-size:10px}.announcement>strong{font-size:15px;margin:5px 0}
+  .announcement>p{font-size:11px;line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+  .temptation{max-width:150px;padding:8px 10px}.temptation strong{font-size:11px}.temptation small{font-size:9px}
+  #floaters .temptation:nth-last-child(n+3){display:none}
+  .order{width:170px}.order strong{font-size:12px}
+  #toast{font-size:11px;max-width:88vw}
+  .pixel-stage{height:calc(100svh - 300px);min-height:360px}
+}
+
+/* Leseseite (helle Seite): dunkle Texte */
+.care-page,.care-page p,.care-page li,.care-page small,.care-page .care-lead{color:#1f3523!important}
+.care-page h1,.care-page h2,.care-page h3,.care-page .care-closing h2{color:#16301b!important}
+.care-page h1 em{color:#3b6a35!important}
+.care-page .micro,.care-page .care-kicker,.care-page .care-section>span,.care-page .care-help>span,.care-page span,.care-page footer,.care-page footer a,.care-page footer span,.care-page .care-small,.care-page .wordmark,.care-page header a{color:#26452a!important}
+.care-page .care-lead{font-size:clamp(18px,2vw,23px)}
+.care-page p{font-size:15px;line-height:1.8}.care-page h2{font-size:20px}
+.care-page button,.care-page .text-button{color:#16301b!important;font-size:13px}
+.care-page .primary-button,.care-page #care-stay{color:#f4f8e4!important}
+.care-page b{color:#0f2514!important}
+
+/* ===== Klarere Spielfläche ===== */
+/* Meldungen: klein unten links statt Mitte */
+.announcement{left:14px!important;right:auto!important;top:auto!important;bottom:62px;transform:none!important;width:min(330px,62%)!important;padding:12px 15px!important;box-shadow:4px 4px #0009}
+.announcement>span{font-size:10px!important}.announcement>strong{font-size:16px!important;margin:5px 0!important;line-height:1.35}.announcement>p{font-size:12px!important;line-height:1.5}
+/* Eingang: seitlich links als kleine Liste */
+.feed-side #scene .feed-strip{position:absolute;left:14px;top:80px;width:260px;height:auto;max-height:44%;z-index:6;display:block;background:#0c120bdb;border:1px solid var(--line);pointer-events:none;overflow:hidden}
+.feed-side .feed-label{display:flex;justify-content:space-between;min-width:0;padding:7px 10px;font-size:11px;border-right:0;border-bottom:1px solid var(--line)}
+.feed-side .feed{display:block;overflow:hidden}
+.feed-side .feed-card{min-width:0;max-width:none;padding:8px 10px;border-right:0;border-bottom:1px solid #2e3b24;display:block}
+.feed-side .feed-card:nth-child(n+4){display:none}
+.feed-side .feed-card h3{font-size:11px;margin:0 0 3px;line-height:1.35}.feed-side .feed-card p{font-size:11px;line-height:1.45;margin:0;max-height:3em;overflow:hidden}
+@media(max-width:900px){.feed-side #scene .feed-strip{display:none}}
+/* Anfang übersichtlich: Nebeninfos erst später */
+body[data-stage="0"] .map-legend,body[data-stage="0"] .possessions,body[data-stage="0"] #pace,
+body[data-stage="1"] .map-legend,body[data-stage="1"] .possessions,body[data-stage="1"] #pace{display:none}
+/* Aufträge: Text bleibt beim Hover lesbar */
+.order,.order:hover,.order:focus,.order:focus-visible,.order:active{color:#14200a!important}
+.order strong,.order small,.order em,.order:hover strong,.order:hover small,.order:hover em{color:#14200a!important;background:none}
+.order:hover,.order:focus-visible{background:#f3fa9a!important;border-color:#fff!important;translate:0 -2px;box-shadow:6px 6px #000a}
+.order.friend:hover,.order.friend:focus-visible{background:#e3fbe6!important}
+.order u i{background:#14200a}
+
+/* Wegweiser nur noch oben rechts («Es reicht»), kein Pop-up auf der Karte */
+#country-road{display:none!important}
+/* Start abgeschlossen: Rückweg */
+.done-message .back-q{font-size:16px;margin:22px 0 10px;color:#eef3dc;font-family:Pixel,monospace;font-weight:400}
+.done-message .primary-button{font-size:13px}
+/* Aufträge: neu = deutlich, Kaffee/Freunde = blau */
+.order .tag{display:block;margin:-8px -10px 6px;padding:4px 10px;background:#14200a;color:#d5e952!important;font-size:10px;letter-spacing:1.5px;font-weight:700}
+.order.friend .tag{background:#0b3a52;color:#bfeaff!important}
+.order.fresh{animation:order-in .22s steps(3),order-ping .8s ease-out 3}
+.order:not(.fresh) .tag{display:none}
+@keyframes order-ping{0%{box-shadow:4px 4px #0009,0 0 0 0 #fff}70%{box-shadow:4px 4px #0009,0 0 0 16px #fff0}100%{box-shadow:4px 4px #0009,0 0 0 0 #fff0}}
+.order.friend{background:#a8dcf2!important;border-color:#e6f7ff!important}
+.order.friend:hover,.order.friend:focus-visible{background:#d6f1fb!important}
+.order.friend u i{background:#0b3a52}
+.order.friend small{letter-spacing:.8px}
+.low-motion .order.fresh{animation:none;outline:3px solid #fff}
+
+/* ===== Plus-Markierungen: klarer Hover ===== */
+.plot,.plot:hover,.plot:focus-visible,.plot:active{background:none!important;border:0!important}
+.plot .plot-name{background:#0b120af2;color:#e6edcf;padding:4px 7px;font-size:11px}
+.plot:hover .plot-name,.plot:focus-visible .plot-name{background:#f4f7cf;color:#14200a;outline:2px solid #14200a}
+.plot:hover .plot-icon,.plot:focus-visible .plot-icon{background:#f4f7cf;color:#14200a;border-color:#fff;scale:1.25}
+.plot .plot-cost{min-width:230px;max-width:280px;padding:11px 13px;background:#f6f8d6;color:#14200a!important;border:2px solid #14200a;font-size:14px;line-height:1.5;font-weight:700;white-space:normal;text-align:left;box-shadow:5px 5px #000a;bottom:calc(100% + 8px)}
+.plot[data-tip="below"] .plot-cost{bottom:auto;top:calc(100% + 8px)}
+.plot[data-side="right"] .plot-cost{left:0;transform:none}
+.plot[data-side="left"] .plot-cost{left:auto;right:0;transform:none}
+.plot:hover,.plot:focus-visible{z-index:60}

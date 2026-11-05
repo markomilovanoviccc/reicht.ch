@@ -279,7 +279,7 @@ const FX = {
       crashT += dt; crashSpawn -= dt;
       if (crashSpawn <= 0) { spawnWin('err', CRASH[crashIdx++ % CRASH.length]); crashSpawn = lerp(1.5, .3, clamp(crashT / 8)); }
       if (!calm) shakeAmp = Math.max(shakeAmp, crashT * .5);
-      if (crashT >= 9) { crashOn = false; FX.slam(); }
+      if (crashT >= 9) { crashOn = false; document.body.classList.remove('crashing'); FX.slam(); }
     }
     // Fenster-Spawn
     if (!crashOn && !paused && !document.hidden && st >= 2) {
@@ -411,7 +411,7 @@ const FX = {
 
   beginCrash() {
     if (crashOn || collapsing || state.finished) return;
-    crashOn = true; crashT = 0; crashSpawn = .2; crashIdx = 0; clearWins(); big.className = '';
+    crashOn = true; document.body.classList.add('crashing'); crashT = 0; crashSpawn = .2; crashIdx = 0; clearWins(); big.className = '';
     live.textContent = 'Termine verpasst, Anrufe verpasst. Das System wird überlastet.';
   },
   slam() {
@@ -427,7 +427,7 @@ const FX = {
   startTime,
   collapse,
   reset(keepReturn) {
-    timers.forEach(clearTimeout); timers = []; collapsing = false; crashOn = false; sinceResume = 0;
+    timers.forEach(clearTimeout); timers = []; collapsing = false; crashOn = false; document.body.classList.remove('crashing'); sinceResume = 0;
     clearWins(); parts.length = 0; words.length = 0; padOn(false);
     const z = Z(); z.on = false; z.ignored = 0; z.shown = 0; if (!keepReturn) z.pauses = 0;
     big.className = ''; big.textContent = '';

@@ -41,14 +41,14 @@
       for (const [text, warn] of lines) {
         if (done) return;
         const row = document.createElement('div'); if (warn) row.className = 'warn'; pre.append(row);
-        for (const ch of text) { if (done) return; row.textContent += ch; await wait(text.length > 40 ? 11 : 17); }
-        await wait(text ? 140 : 60);
+        for (const ch of text) { if (done) return; row.textContent += ch; await wait(text.length > 40 ? 17 : 26); }
+        await wait(text ? 380 : 150);
       }
       const cur = document.createElement('span'); cur.className = 'cursor'; pre.lastChild.append(' ', cur);
       const note = document.createElement('div'); note.className = 'fx-note-boot';
       note.textContent = 'Hinweis: Dieses Spiel arbeitet mit Flackern, Glitch-Effekten und lauter werdender Musik. Unter dem Start kannst du die Effekte reduzieren.';
       el.append(note);
-      await wait(2300); finish();
+      await wait(9000); finish();
     })();
   }
   boot();

@@ -129,4 +129,7 @@ Vor einer Award-Einreichung empfehlen sich Tests mit mehreren Personen, um Spiel
 ## Version 11 — Fliessender Absturz, Startseite im Ende
 - **Absturz:** Der Crash baut sich jetzt über etwa 9 Sekunden auf. Zuerst einzelne Pop-ups («Termin verpasst», «Verpasster Anruf», «Freunde: Lange nichts gehört»), dann immer schneller, mit wachsendem Beben. Danach folgt «ERROR_429», dann die «Nimm dir Zeit»-Meldungen und der Kollaps.
 - **Ende:** Im Outro und in der Auswertung gibt es den Button «Zur Startseite». Dort zeigt die Startseite, dass die Runde abgeschlossen ist.
-- Favicon als SVG, PNG und ICO (favicon-r.svg, favicon-32.png, favicon.ico, apple-touch-icon.png) mit Versionsparameter, damit Browser das alte G nicht aus dem Cache laden.
+
+## Version 19
+- Die «+»-Markierungen sind quer über die ganze Karte verteilt (gleichmässige Streuung über das Stadtgebiet, mit Mindestabstand) statt in einer Linie.
+- Aufträge und «Zeit für dich»-Karten spielen beim Anklicken einen Ton: Aufträge eine kurze, helle Münz-Tonfolge, Zeit für dich ein ruhiger, warmer Klang.
